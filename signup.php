@@ -27,6 +27,36 @@ include("cse.php");
 	</select>
 	</td>
   </tr>
+  <tr>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
+  <tr>
+  <td>
+  USER NAME
+  </td>
+  <td>
+  <input type="text" name="username" />
+  </td>
+  </tr>
+  <tr>
+  <td>
+  PASSWORD
+  </td>
+  <td>
+  <input type="password" name="passoword" />
+  </td>
+  </tr>
+  <tr>
+  <td>
+  CONFIRM PASSOWORD
+  </td>
+  <td>
+  <input type="password" name="confirmpassword" />
+  </td>
+  </tr>
 </table>
 
 </form>
