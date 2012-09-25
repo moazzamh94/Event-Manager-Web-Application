@@ -19,7 +19,11 @@ include("cse.php");
     <td>CATEGORY</td>
     <td>
 	<select name="category">
-	<option> </option>
+	<option value="-1">SELECT CATEGORY</option>
+	<option value="1">ADMINSTRATOR</option>
+	<option value="2">FACULTY</option>
+	<option value="3">STAFF</option>
+	<option value="4">STUDENTS</option>
 	</select>
 	</td>
   </tr>
