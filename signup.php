@@ -58,7 +58,7 @@ include("cse.php");
   </td>
   </tr>
 </table>
-
+<input type="submit"  value="REGISTER"/>
 </form>
 </body>
 </html>
