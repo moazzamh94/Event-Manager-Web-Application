@@ -11,6 +11,10 @@ background-color:#00FF00;
 font:italic;
 font-weight:bolder;
 }
+#error
+{
+color:#FF0000;
+}
 .submit
 {
 width:200px;
@@ -18,7 +22,16 @@ width:200px;
 </style>
 </head>
 <body>
-<form name="login_form" action="welcom.php">
+<div id="error">
+<?php
+if(isset($_SESSION['error']))
+{
+echo "!!!".$_SESSION['error'];
+unset($_SESSION['error']);
+}
+?>
+</div>
+<form name="login_form" action="welcome.php">
 <table>
 <tr>
 <td>
