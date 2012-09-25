@@ -9,6 +9,9 @@ include("cse.php");
 color:#FF0000;
 background-color:#00FF00;
 }
+.submit
+{
+width:200px;
 }
 </style>
 </head>
@@ -31,7 +34,7 @@ PASSWORD
 </td>
 </tr>
 </table>
-<input type="submit" value="LOGIN" />
+<input type="submit" value="LOGIN" class="submit"/>
 </form>
 </body>
 </html>
