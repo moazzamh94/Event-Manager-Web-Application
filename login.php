@@ -1,11 +1,16 @@
 <?php
 include("cse.php");
 ?>
-<?php
-session_start();
-?>
 <html>
 <head>
+<style type="text/css">
+.data
+{
+color:#FF0000;
+background-color:#00FF00;
+}
+}
+</style>
 </head>
 <body>
 <form name="login_form" action="welcom.php">
@@ -15,14 +20,14 @@ session_start();
 USER NAME
 </td>
 <td>
-<input type="text" name="name" />
+<input type="text" name="name" class="data" />
 </td>
 <tr>
 <td>
 PASSWORD
 </td>
 <td>
-<input type="password" name="pass" />
+<input type="password" name="pass" class="data"/>
 </td>
 </tr>
 </table>
