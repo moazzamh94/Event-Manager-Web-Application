@@ -8,6 +8,8 @@ include("cse.php");
 {
 color:#FF0000;
 background-color:#00FF00;
+font:italic;
+font-weight:bolder;
 }
 .submit
 {
