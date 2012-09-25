@@ -198,6 +198,9 @@ DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING,IIT KANPUR
 		</ul>
 	</li>
 	<li><a href="subscribe.php">SUBSCRIBE FOR EVENT</a></li>
+	<?php
+	if($log==0) echo "<li> <a href=\"#\">REGISTER</a></li>";
+	?>
 </ul>
 </body>
 </html>
