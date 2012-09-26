@@ -3,6 +3,7 @@ include("cse.php");
 if(!isset($_SESSION['id']))
 {
 $_SESSION['log']="You need to be first logged on to book a class";
+$_SESSION['logurl']="book_normalclass.php";
 header('Location:login.php');
 }
 ?>

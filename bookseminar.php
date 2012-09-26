@@ -4,9 +4,9 @@
 include('cse.php');
 if(!(isset($_SESSION['id'])))
 {
-$_SESSION['log']="you need to be logged in to book an event";
-$_SESSION['logurl']="book_seminar_extraclass.php";
-header("Location:login.php");
+$_SESSION['log']="you nedd to be logged in to book a seminar";
+$_SESSION['logurl']="bookseminar.php";
+header('Location:login.php');
 }
 include("gen.php");
 ?>
@@ -55,7 +55,6 @@ $('#end_time').ptTimeSelect();
 <table>
 <tr>
 <td>
-<font color="#FF0000">*</font>
 DATE
 </td>
 <td>
@@ -64,7 +63,6 @@ DATE
 </tr>
 <tr>
 <td>
-<font color="#FF0000">*</font>
 START TIME
 </td>
 <td>
@@ -73,46 +71,10 @@ START TIME
 </tr>
 <tr>
 <td>
-<font color="#FF0000">*</font>
 END TIME
 </td>
 <td>
 <input type="text" id="end_time">
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-CATEGORY
-</td>
-<td>
-<select name="category">
-<option value="-1">SELECT CATEGORY</option>
-<option value="3">FACULTY</option>
-<option value="2">STAFF</option>
-<option value="1">STUDENT</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-NAME
-</td>
-<td>
-<input type="text" name="bookers_name">
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-EMAIL 
-<font color="#FF0000">
-@iitk
-</font>
-</td>
-<td>
-<input type="text" name="email_id">
 </td>
 </tr>
 </table>
