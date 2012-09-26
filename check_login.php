@@ -16,5 +16,10 @@ $_SESSION['id']=$a['id'];
 break;}
 }
 if($flag==0) header('Location:login.php');
-else  header('Location:cse.php');
+$to='home.php';
+if(isset($_SESSION['logurl']))
+{
+$to=$_SESSION['logurl'];
+}
+else  header('Location:'.$to);
 ?>
