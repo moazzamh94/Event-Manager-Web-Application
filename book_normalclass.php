@@ -1,13 +1,15 @@
-<html>
-<head>
 <?php
-include('cse.php');
-include("gen.php");
+include("cse.php");
 if(!isset($_SESSION['id']))
 {
 $_SESSION['log']="You need to be first logged on to book a class";
 header('Location:login.php');
 }
+?>
+<html>
+<head>
+<?php
+include("gen.php");
 ?>
 <style type="text/css">
 #comment
