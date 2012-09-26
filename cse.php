@@ -1,6 +1,6 @@
 <?php
-session_start();
-if(isset($_SESSION['user'])) $log=1;
+include("connect.php");
+if(isset($_SESSION['id'])) $log=1;
 else $log=0;
 ?>
 <html>
@@ -9,6 +9,12 @@ else $log=0;
 body
 {
 background-image:url('bgimage.jpg');
+}
+#welcome
+{
+text-align:center;
+color:#0000FF;
+font-size:18px;
 }
 #heading
 {
@@ -166,11 +172,22 @@ font:italic;
 </style>
 </head>
 <body>
-<h1>
-<center id="heading">
-DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING,IIT KANPUR
-</center>
-</h1>
+<h2>
+<marquee id="heading">
+EVENT   MANAGER , C.S.E , IITK
+</marquee>
+</h2>
+<div id="welcome">
+<?php
+if(isset($_SESSION['id']))
+{
+$id=$_SESSION['id'];
+$q=mysql_query("select * from `member` where id='$id'");
+$temp=mysql_fetch_array($q);
+echo "WElCOME ".$temp['name']."<br>";
+}
+?>
+</div>
 <ul id="menu">
     <li> <a href="cse.php">Home </a> </li>
 	<li><a href="http://www.cse.iitk.ac.in/">CSE</a></li>
