@@ -16,10 +16,11 @@ $_SESSION['id']=$a['id'];
 break;}
 }
 if($flag==0) header('Location:login.php');
-$to='home.php';
+$to='Location:home.php';
 if(isset($_SESSION['logurl']))
 {
-$to=$_SESSION['logurl'];
+$to="Location:".$_SESSION['logurl'];
+unset($_SESSION['logurl']);
 }
-else  header('Location:'.$to);
+header($to.'');
 ?>
