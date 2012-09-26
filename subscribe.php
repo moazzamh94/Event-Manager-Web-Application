@@ -2,7 +2,8 @@
 include("cse.php");
 if(!(isset($_SESSION['id'])))
 {
-header('Location:home.php');
+$_SESSION['log']="you need to be first logged in to subscribe for an event";
+header('Location:login.php');
 }
 ?>
 <html>
