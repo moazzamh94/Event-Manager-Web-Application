@@ -3,6 +3,8 @@ include("cse.php");
 ?>
 <html>
 <head>
+<style type="text/css">
+</style>
 </head>
 <body>
 <a href="http://www.cse.iitk.ac.in">
@@ -10,14 +12,13 @@ include("cse.php");
 </a>
 </image>
 </body>
-<center>
 <h3>
 TODAY'S EVENTS
 </h3>
 <h4>
 ROOM NO.101
 </h4>
-<table border="10px" width="1000px">
+<table border="10px" width="1000px" id="table">
 <tr bgcolor="#00FF00">
 <th>EVENT</th><th>ROOM NO.</th><th>BY</th><th>SCHEDULE</th><th>EVENT TYPE</th>
 </tr>
@@ -34,10 +35,10 @@ ROOM NO.101
 <td>AUTOMATA</td><td>101</td><td>DHEERAJ SANGHI</td><td>17:00-19:00</td><td>EXTRA CLASS</td>
 </tr>
 </table>
-</center>
-<center>
+<h4>
 ROOM NO.102
-<table border="10px" width="1000px">
+</h4>
+<table border="10px" width="1000px" id="table">
 <tr bgcolor="#00FF00">
 <th>EVENT</th><th>ROOM NO.</th><th>BY</th><th>SCHEDULE</th><th>EVENT TYPE</th>
 </tr>
@@ -50,5 +51,4 @@ ROOM NO.102
 <tr>
 <td>HACKING101</td><td>102</td><td>DHEERAJ SANGHI</td><td>15:00-17:00</td><td>EXTRA CLASS</td>
 </tr>
-</center>
 </html>
