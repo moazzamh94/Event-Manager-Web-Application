@@ -1,3 +1,14 @@
+<?php
+include("connect.php");
+$name=$_SESSION['name'];
+$user=$_SESSION['user'];
+$pass=$_SESSION['pass'];
+$email=$_SESSION['email'];
+$category=$_SESSION['category'];
+//mysql_query("INSERT INTO `project`.`member` (`name`, `email`, `category`, `user`, `pass`, `id`) VALUES ($name, $email,'2', $user, $pass, NULL)");
+mysql_query("INSERT INTO `project`.`member` (`name`, `email`, `category`, `user`, `pass`, `id`) VALUES ('$name', '$email', '$category', '$user', '$pass', NULL)");
+unset($_SESSION['user']);
+?>
 <html>
 <head>
 <style type="text/css">
@@ -7,22 +18,15 @@ color:#00FF00;
 background-color:#FFFF00;
 }
 </style>
-<script language="javascript">
+<!--<script language="javascript">
 function gotohome()
 {
-window.open("home.php");
+//window.open("home.php");
 }
 setTimeout(gotohome,7000);
-</script>
+</script>!-->
 </head>
 <body background="congrat.gif">
-<?php
-$name=$_SESSION['name'];
-$user=$_SESSION['user'];
-$pass=$_SESSION['pass'];
-$email=$_SESSION['email'];
-$category=$_SESSION['category'];
-?>
 <center>
 <div id="message">
 <h2>
@@ -40,7 +44,5 @@ NOW YOU CAN LOGIN TO YOUR ACCOUNT
 </div>
 </center>
 <br />
-<?php
-//a=mysql_query("insert into `PROJECT`.`member`(`name`,`email`,`category`,`user`,`pass`,`id`) values($name,$email,$category,$user,$pass,NULL)");
-?>
 </body>
+</html>
