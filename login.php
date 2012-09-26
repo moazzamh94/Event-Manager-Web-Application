@@ -38,7 +38,7 @@ unset($_SESSION['error']);
 USER NAME
 </td>
 <td>
-<input type="text" name="name" class="data" />
+<input type="text" name="user" class="data" />
 </td>
 <tr>
 <td>
