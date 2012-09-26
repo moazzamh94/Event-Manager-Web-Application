@@ -1,11 +1,23 @@
 <?php
 include("connect.php");
-$result = mysql_query("SELECT * FROM `member`");
-echo "<table>";
-print_r($row);
-while($row = mysql_fetch_array( $result ))
+$a=mysql_query("select * from `member`");
+?>
+<table width="10px" border="10px">
+<tr>
+<th>
+NAME
+</th>
+<th>
+EMAIL
+</th>
+<th>
+PASSWORD
+</th>
+</tr>
+<?php
+while($b=mysql_fetch_array($a))
 {
-echo "<tr>"."<td>".$row['name']."</td>"."<td>".$row['email']."</td>"."</tr>";
+echo "<tr><td>".$b['name']."</td><td>".$b['email']."</td><td>".$b['pass']."</td></tr>";
 }
 echo "</table>";
 ?>
