@@ -1,2 +1,7 @@
 IP address:172.24.10.5
-The address of our homepage is
+The address of our homepage is http://172.24.10.5/project/
+For login purposes you can press REGISTER TAB
+or you can signup as
+USER NAME:guest
+PASSWORD:guest
+or you can create a fresh account by pressing the register tab
