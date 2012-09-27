@@ -3,9 +3,24 @@ include("cse.php");
 ?>
 <html>
 <head>
+<style type="text/css">
+#error
+{
+color:#FF0000;
+};
+</style>
 </head>
 <body>
-<form name="signup" action="save_signup.php">
+<div id="error">
+<?php
+if(isset($_SESSION['error']))
+{
+echo "!!!".$_SESSION['error'];
+unset($_SESSION['error']);
+}
+?>
+</div>
+<form name="signup" action="check_signup.php">
 <table>
   <tr>
     <td>NAME</td>
@@ -20,10 +35,10 @@ include("cse.php");
     <td>
 	<select name="category">
 	<option value="-1">SELECT CATEGORY</option>
-	<option value="1">ADMINSTRATOR</option>
-	<option value="2">FACULTY</option>
-	<option value="3">STAFF</option>
-	<option value="4">STUDENTS</option>
+	<option value=1>ADMINSTRATOR</option>
+	<option value=2>FACULTY</option>
+	<option value=3>STAFF</option>
+	<option value=4>STUDENTS</option>
 	</select>
 	</td>
   </tr>
@@ -46,7 +61,7 @@ include("cse.php");
   PASSWORD
   </td>
   <td>
-  <input type="password" name="passoword" />
+  <input type="password" name="password" />
   </td>
   </tr>
   <tr>

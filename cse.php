@@ -174,7 +174,7 @@ font:italic;
 <body>
 <h2>
 <marquee id="heading">
-EVENT   MANAGER , C.S.E , IITK
+EVENT   MANAGER , Computer Science & Engineering , IIT KANPUR
 </marquee>
 </h2>
 <div id="welcome">
@@ -189,7 +189,7 @@ echo "WElCOME ".$temp['name']."<br>";
 ?>
 </div>
 <ul id="menu">
-    <li> <a href="cse.php">Home </a> </li>
+    <li> <a href="home.php">Home </a> </li>
 	<li><a href="http://www.cse.iitk.ac.in/">CSE</a></li>
 	<li><a href=<?php if ($log==0) echo "login.php"; else echo "logout.php";?>> <?php if($log==0) echo "LOGIN"; else echo "LOGOUT"; ?></a></li>
 	<li>
