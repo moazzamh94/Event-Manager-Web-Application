@@ -218,6 +218,16 @@ echo "WElCOME ".$temp['name']."<br>";
 	<?php
 	if($log==0) echo "<li> <a href=\"signup.php\">REGISTER</a></li>";
 	?>
+	<li>
+	<a href="#">RESOURCES</a>
+	<ul>
+	<li><a href="#">CS101</a></li>
+	<li><a href="#">CS102</a></li>
+	<li><a href="#">CS103</a></li>
+	<li><a href="#">CS210</a></li>
+	<li><a href="#">CS314</a></li>
+	</ul>
+	</li>
 </ul>
 </body>
 </html>
