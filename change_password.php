@@ -6,7 +6,7 @@ if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="YOU MUST BE LOGGED IN TO CHANGE YOUR PASSWORD";
 $_SESSION['logurl']="change_password.php";
-header('Location:login.php');
+header('Location:emergencylogin.php');
 }
 ?>
 <html>

@@ -7,7 +7,7 @@ if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="you need to be logged in to book an event";
 $_SESSION['logurl']="book_event.php";
-header("Location:login.php");
+header("Location:emergencylogin.php");
 }
 include("cse.php");
 include("gen.php");
