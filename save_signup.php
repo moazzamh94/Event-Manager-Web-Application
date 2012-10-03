@@ -8,6 +8,12 @@ $category=$_SESSION['category'];
 //mysql_query("INSERT INTO `project`.`member` (`name`, `email`, `category`, `user`, `pass`, `id`) VALUES ($name, $email,'2', $user, $pass, NULL)");
 mysql_query("INSERT INTO `project`.`member` (`name`, `email`, `category`, `user`, `pass`, `id`) VALUES ('$name', '$email', '$category', '$user', '$pass', NULL)");
 unset($_SESSION['user']);
+unset($_SESSION['name']);
+unset($_SESSION['pass']);
+unset($_SESSION['email']);
+unset($_SESSION['category']);
+$w=mysql_fetch_array(mysql_query("select * from `member` where `user`='$user'"));
+$_SESSION['id']=$w;
 ?>
 <html>
 <head>

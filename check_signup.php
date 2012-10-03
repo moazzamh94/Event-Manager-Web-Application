@@ -21,6 +21,11 @@ if($c==0) {$flag=0;$_SESSION['error']="either username,email-id or password you 
 if($flag==0) {header('Location:signup.php');break;}
 else 
 {
+$_SESSION['name']=$name;
+$_SESSION['user']=$user;
+$_SESSION['pass']=$pass;
+$_SESSION['email']=$email;
+$_SESSION['category']=$category;
 header('Location:save_signup.php');
 }
 ?>
