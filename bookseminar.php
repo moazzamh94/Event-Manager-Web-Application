@@ -2,6 +2,7 @@
 <head>
 <?php
 include('cse.php');
+include("connect.php");
 if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="you nedd to be logged in to book a seminar";

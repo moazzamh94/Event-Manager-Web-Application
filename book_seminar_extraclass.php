@@ -1,13 +1,14 @@
 <html>
 <head>
 <?php
-include('cse.php');
+include("connect.php");
 if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="you need to be logged in to book an event";
 $_SESSION['logurl']="book_seminar_extraclass.php";
 header("Location:login.php");
 }
+include("cse.php");
 include("gen.php");
 ?>
 <style type="text/css">

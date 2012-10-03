@@ -13,7 +13,8 @@ while($a=mysql_fetch_array($q))
 if(($a['user']==$user) and ($a['pass']==$pass)) {
 $flag=1;
 $_SESSION['id']=$a['id'];
-break;}
+break;
+}
 }
 if($flag==0) header('Location:login.php');
 $to='Location:home.php';

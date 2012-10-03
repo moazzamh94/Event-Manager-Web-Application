@@ -1,5 +1,4 @@
 <?php
-include("connect.php");
 if(isset($_SESSION['id'])) $log=1;
 else $log=0;
 ?>
@@ -182,7 +181,7 @@ EVENT   MANAGER , Computer Science & Engineering , IIT KANPUR
 if(isset($_SESSION['id']))
 {
 $id=$_SESSION['id'];
-$q=mysql_query("select * from `member` where id='$id'");
+$q=mysql_query("select * from `member` where `id`='$id'")or die (mysql_error());
 $temp=mysql_fetch_array($q);
 echo "WElCOME ".$temp['name']."<br>";
 }
