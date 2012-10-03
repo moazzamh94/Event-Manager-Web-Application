@@ -39,7 +39,7 @@ unset($_SESSION['error']);
 }
 ?>
 </div>
-<form name="login_form" action="check_login.php">
+<form name="login_form" action="check_elogin.php">
 <table>
 <tr>
 <td>
