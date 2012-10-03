@@ -28,7 +28,6 @@ if(isset($_SESSION['log']))
 {
 echo $_SESSION['log'];
 unset($_SESSION['log']);
-unset($_SESSION['logurl']);
 }
 ?>
 <div id="error">

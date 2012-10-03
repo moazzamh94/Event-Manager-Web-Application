@@ -2,6 +2,7 @@
 <head>
 <?php
 include("connect.php");
+if(isset($_SESSION['logurl'])) unset($_SESSION['logurl']);
 if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="you need to be logged in to book an event";

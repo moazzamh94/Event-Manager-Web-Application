@@ -1,6 +1,7 @@
 <?php
 include("connect.php");
 include("cse.php");
+if(isset($_SESSION['logurl'])) unset($_SESSION['logurl']);
 ?>
 <html>
 <head>
