@@ -60,7 +60,7 @@ PASSWORD
 <input type="submit" value="LOGIN" class="submit"/>
 </form>
 <marquee>
-YOU CAN ALSO LOGIN AS GUEST WITH  USER NAME: guest  PASSWORD: guest  OR YOU CAN CREATE A FRESH ACCOUNT BY CLICKING REGISTER TAB
+YOU CAN CREATE A FRESH ACCOUNT BY CLICKING REGISTER TAB
 </marquee>
 </body>
 </html>

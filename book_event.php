@@ -5,7 +5,7 @@ include("connect.php");
 if(!(isset($_SESSION['id'])))
 {
 $_SESSION['log']="you need to be logged in to book an event";
-$_SESSION['logurl']="book_seminar_extraclass.php";
+$_SESSION['logurl']="book_event.php";
 header("Location:login.php");
 }
 include("cse.php");
@@ -45,14 +45,34 @@ var changeYear = $( "#enter_date" ).datepicker( "option", "Year" );
 $( "#enter_date" ).datepicker( "option", "changeYear", true );
 var changeMonth = $( "#enter_date" ).datepicker( "option", "Month" );
 $( "#enter_date" ).datepicker( "option", "changeMonth", true );
-$('#start_time').ptTimeSelect();
-$('#end_time').ptTimeSelect();
 }
 )
 </script>
 </head>
 <body bgcolor="#00FF00">
 <form name="book_seminar" action="#">
+<table>
+<font>
+<font color="#FF0000">*</font>
+START TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<select name="am">
+<option value="0"> A.M. </option>
+<option value="1"> P.M. </option>
+</select>
+<select name="text" id="start_time">
+<option value="0">12-1</option>
+<option value="1">1-2</option>
+<option value="1">2-3</option>
+<option value="1">3-4</option>
+<option value="1">4-5</option>
+<option value="1">5-6.</option>
+<option value="1">6-7</option>
+<option value="1">7-8</option>
+<option value="1">8-9</option>
+<option value="1">9-10</option>
+<option value="1">10-11</option>
+<option value="1">11-12</option>
+</select>
 <table>
 <tr>
 <td>
@@ -63,87 +83,29 @@ DATE
 <input id="enter_date" type="text">
 </td>
 </tr>
+
 <tr>
 <td>
-<font color="#FF0000">*</font>
-START TIME
-</td>
-<td>
-<input type="text" id="start_time">
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-END TIME
-</td>
-<td>
-<input type="text" id="end_time">
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-CATEGORY
-</td>
-<td>
-<select name="category">
-<option value="-1">SELECT CATEGORY</option>
-<option value="3">FACULTY</option>
-<option value="2">STAFF</option>
-<option value="1">STUDENT</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-NAME
-</td>
-<td>
-<input type="text" name="bookers_name">
-</td>
-</tr>
-<tr>
-<td>
-<font color="#FF0000">*</font>
-EMAIL 
 <font color="#FF0000">
-@iitk
+*
 </font>
+ENTER KEYWORD
 </td>
 <td>
-<input type="text" name="email_id">
+<input type="text" name="keywords"/>
 </td>
 </tr>
 </table>
-<br>
+<center>
 <h1>
-<font color="#FF0000">
-*
-</font>
 DESCRIPTION
 </h1>
-<center>
 <textarea name="description"  rows="5" cols="100">
 </textarea>
-</center>
-<div id="comment">
-ENTER COMMENTS
-</div>
-<center>
-<textarea name="comment"  rows="5" cols="100">
-</textarea>
-</center>
 <font color="#FF0000">
 *
 </font>
-ENTER KEYWORDS SEPARATED BY BLANK SPACES
-<center>
-<input type="text" name="keywords" size="150" />
-</center>
 <br/>
-<center>
 <input type="submit" name="finalise" value="BOOK EVENT" id="ok">
 </center>
 </form>
