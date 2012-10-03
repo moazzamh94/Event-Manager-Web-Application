@@ -11,6 +11,13 @@ header('Location:emergencylogin.php');
 ?>
 <html>
 <body>
+<?php
+if(isset($_SESSION['error']))
+{
+echo $_SESSION['error'];
+unset($_SESSION['error']);
+}
+?>
 <form name="c" action="check_changepassword.php">
 <h1>
 CHANGE PASSWORD
@@ -41,6 +48,7 @@ CONFIRM PASSWORD
 </td>
 </tr>
 </table>
+<input type="submit" value="CHANGE PASSWORD">
 </form>
 </body>
 </html>

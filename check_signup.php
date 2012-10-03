@@ -1,6 +1,6 @@
 <!--username passoword confirmpassword name email category -->
 <?php
-session_start();
+include("connect.php");
 $flag=1;
 $user=$_REQUEST['username'];
 if($user=='') {$_SESSION['error']="user name is missing";$flag=0;}
@@ -11,14 +11,16 @@ else {$email=$_REQUEST['email'];if($email=='') {$_SESSION['error']="email is mis
 else {$category=$_REQUEST['category'];if($_REQUEST['category']=='-1') {$_SESSION['error']="please select your category";$flag=0;}
 else if($_REQUEST['password']!=$_REQUEST['confirmpassword']) {$_SESSION['error']="passwords do not match"; $flag=0;}
 }}}}
+$c=1;
+$q=mysql_query("select * from `member`") or die(mysql_error());
+while($qs=mysql_fetch_array($q))
+{
+if($qs['user']==$user or $qs['pass']==$pass or $qs['email']==$email) {$c=0;break;}
+}
+if($c==0) {$flag=0;$_SESSION['error']="either username,email-id or password you have provided has matched with a third person in the database";}
 if($flag==0) {header('Location:signup.php');break;}
 else 
 {
-$_SESSION['name']=$name;
-$_SESSION['user']=$user;
-$_SESSION['pass']=$pass;
-$_SESSION['email']=$email;
-$_SESSION['category']=$category;
 header('Location:save_signup.php');
 }
 ?>
