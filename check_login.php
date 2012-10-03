@@ -18,10 +18,5 @@ break;
 }
 if($flag==0) header('Location:login.php');
 $to='Location:home.php';
-if(isset($_SESSION['logurl']))
-{
-$to="Location:".$_SESSION['logurl'];
-unset($_SESSION['logurl']);
-}
 header($to.'');
 ?>
