@@ -192,28 +192,12 @@ echo "WElCOME ".$temp['name']."<br>";
 	<li><a href="http://www.cse.iitk.ac.in/">CSE</a></li>
 	<li><a href=<?php if ($log==0) echo "login.php"; else echo "logout.php";?>> <?php if($log==0) echo "LOGIN"; else echo "LOGOUT"; ?></a></li>
 	<li>
-		<a href="#">CLASSES</a>
+		<a href="#">EVENT</a>
 		<ul>
-			<li><a href="#">Todays Class</a></li>
-			<li>
-				<a href="#">Book Class</a>
-				<ul>
-				<li><a href="book_normalclass.php">BOOK NORMAL CLASS </a> </li>
-				<li><a href="book_seminar_extraclass.php">BOOK EXTRA CLASS </a> </li>
-				</ul>
-			</li>
-			<li><a href="#">Previous Classes</a></li>
+			<li><a href="book_event.php">BOOK EVENT</a></li>
+			<li><a href="#">SEE PREVIOUS EVENTS</a></li>
 		</ul>
 	</li>
-	<li>
-		<a href="#">SEMINAR</a>
-		<ul>
-		<li> <a href="book_seminar_extraclass.php"> BOOK SEMINAR </a> </li>
-		<li> <a href="#"> TODAY'S SEMINAR </a> </li>
-		<li> <a href="#"> PREVIOUS SEMINARS </a> </li>
-		</ul>
-	</li>
-	<li><a href="subscribe.php">SUBSCRIBE FOR EVENT</a></li>
 	<?php
 	if($log==0) echo "<li> <a href=\"signup.php\">REGISTER</a></li>";
 	?>
@@ -227,6 +211,8 @@ echo "WElCOME ".$temp['name']."<br>";
 	<li><a href="#">CS314</a></li>
 	</ul>
 	</li>
+	<li><a href="change_password.php">CHANGE PASSWORD</a></li>
+	<li> <a href="help.php">HELP</a></li>
 </ul>
 </body>
 </html>
