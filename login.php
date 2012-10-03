@@ -23,13 +23,6 @@ width:200px;
 </style>
 </head>
 <body>
-<?php
-if(isset($_SESSION['log']))
-{
-echo $_SESSION['log'];
-unset($_SESSION['log']);
-}
-?>
 <div id="error">
 <?php
 if(isset($_SESSION['error']))
