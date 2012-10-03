@@ -96,6 +96,24 @@ ENTER KEYWORD
 <input type="text" name="keywords"/>
 </td>
 </tr>
+<tr>
+<td>
+<font color="#FF0000">
+*
+</font>
+VENUE
+</td>
+<td>
+<select name="room">
+<option value="-1">SELECT VENUE</option>
+<option value="0">CS101</option>
+<option value="1">CS102</option>
+<option value="2">CS103</option>
+<option value="3">CS210</option>
+<option value="4">CS314</option>
+</select>
+</td>
+</tr>
 </table>
 <center>
 <h1>
@@ -110,5 +128,6 @@ DESCRIPTION
 <input type="submit" name="finalise" value="BOOK EVENT" id="ok">
 </center>
 </form>
+ALL FIELDS MARKED WITH <font color="#FF0000">*</font> ARE COMPULSORY
 </body>
 </html>

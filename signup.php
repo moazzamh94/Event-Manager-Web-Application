@@ -1,4 +1,5 @@
 <?php
+include("connect.php");
 include("cse.php");
 ?>
 <html>

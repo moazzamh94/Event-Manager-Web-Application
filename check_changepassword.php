@@ -27,4 +27,10 @@ if($flag==0)
 {
 header('Location:change_password.php');
 }
+else
+{
+$_SESSION['news']="password changed successfully";
+mysql_query("update `member` set `pass`='$npass' where `id`='$id'");
+header('Location:home.php');
+}
 ?>

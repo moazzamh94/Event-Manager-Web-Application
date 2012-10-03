@@ -1,7 +1,16 @@
 <?php
 include("connect.php");
-include("cse.php");
 if(isset($_SESSION['logurl'])) unset($_SESSION['logurl']);
+if(isset($_SESSION['news']))
+{
+unset($_SESSION['news']);
+?>
+<script language="javascript">
+alert("PASSWORD CHANGED SUCCESSFULLY");
+</script>
+<?php
+}
+include("cse.php");
 ?>
 <html>
 <head>

@@ -13,7 +13,7 @@ unset($_SESSION['pass']);
 unset($_SESSION['email']);
 unset($_SESSION['category']);
 $w=mysql_fetch_array(mysql_query("select * from `member` where `user`='$user'"));
-$_SESSION['id']=$w;
+$_SESSION['id']=$w['id'];
 ?>
 <html>
 <head>
@@ -24,6 +24,13 @@ color:#00FF00;
 background-color:#FFFF00;
 }
 </style>
+<script language="javascript">
+function g()
+{
+window.location="home.php";
+}
+setTimeout("g()",7000);
+</script>
 <!--<script language="javascript">
 function gotohome()
 {
@@ -34,14 +41,9 @@ setTimeout(gotohome,7000);
 </head>
 <body background="congrat.gif">
 <center>
-<div id="message">
+<div id="message" onClick="g()">
 <h2>
 !!!CONGRATULATIONS YOU HAVE REGISTERED SUCCESSFULLY
-<br />
-YOUR ACCOUNT DETAILS HAVE BEEN MAILED AT YOU E-MAIL ID
-<br />
-NOW YOU CAN LOGIN TO YOUR ACCOUNT
-<br />
 </h2>
 <h1>
 <a href="home.php">GO TO HOME</a>
