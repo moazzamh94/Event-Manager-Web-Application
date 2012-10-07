@@ -10,13 +10,13 @@ $q=mysql_query("select * from `member`");
 $flag=0;
 while($a=mysql_fetch_array($q))
 {
-if(($a['user']==$user) and ($a['pass']==$pass)) {
+if(($a['user']==$user) and (crypt($pass,$a['pass'])==$a['pass'])) {
 $flag=1;
 $_SESSION['id']=$a['id'];
 break;
 }
 }
-if($flag==0) {header('Location:login.php');exit;}
+if($flag==0) {$_SESSION['error']="user name or password is incorrect";header('Location:emergencylogin.php');exit;}
 $to='Location:home.php';
 if(isset($_SESSION['logurl']))
 {

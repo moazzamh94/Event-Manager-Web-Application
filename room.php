@@ -1,5 +1,9 @@
 <?php
-date_default_timezone_set('Asia/Kolkata');
+include("connect.php");
+include("cse.php");
+$cx=$_REQUEST['room'];
+?>
+<?php
 function nex($e)
 {
 if($e=="00") return "00:00 - 01:00";
@@ -38,7 +42,17 @@ $t=date("Y-m-d")." 00:00:00";
 $date = strtotime("+7 day", strtotime(date("Y-m-d")));
 $date=date("Y-m-d", $date);
 $date=$date." 23:59:59";
-$r=mysql_query("SELECT * FROM `eventlist` WHERE `schedule` >= '$t' AND `schedule` <= '$date' ORDER BY `schedule`,`venue`");
+$r=mysql_query("SELECT * FROM `eventlist` WHERE `schedule` >= '$t' AND `schedule` <= '$date' AND `venue`='$cx' ORDER BY `schedule`,`venue`");
+if(mysql_num_rows($r)==0)
+{
+echo "SORRY NO EVENTS BOOKED in  ".pro($cx);
+exit;
+}
+?>
+<h1>
+LIST OF EVENTS IN <?php echo pro($cx);?>
+</h1>
+<?php
 $p=mysql_fetch_array($r);
 $c = new DateTime($p['schedule']);
 $z=new DateTime($p['schedule']);
@@ -69,6 +83,7 @@ if($t=="2") return "CS103";
 if($t=="3") return "CS210";
 if($t=="4") return "CS314";
 }
+$z=new DateTime($p['schedule']);
 echo "<tr><td>".$p['eventname']."</td><td>".pro($p['venue'])."</td>"."<td>".nex($z->format('H'))."</td><td>".$p['booker']."</td></tr>";
 while($p=mysql_fetch_array($r))
 {
@@ -101,3 +116,5 @@ echo "<tr><td>".$p['eventname']."</td><td>".pro($p['venue'])."</td><td>".nex($wa
 }
 ?>
 </table>
+<?php
+?>

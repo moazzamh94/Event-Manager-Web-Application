@@ -195,7 +195,7 @@ echo "WElCOME ".$temp['name']."<br>";
 		<a href="#">EVENT</a>
 		<ul>
 			<li><a href="book_event.php">BOOK EVENT</a></li>
-			<li><a href="#">SEE PREVIOUS EVENTS</a></li>
+			<li><a href="home.php">NEXT EVENTS</a></li>
 		</ul>
 	</li>
 	<?php
@@ -204,11 +204,11 @@ echo "WElCOME ".$temp['name']."<br>";
 	<li>
 	<a href="#">RESOURCES</a>
 	<ul>
-	<li><a href="#">CS101</a></li>
-	<li><a href="#">CS102</a></li>
-	<li><a href="#">CS103</a></li>
-	<li><a href="#">CS210</a></li>
-	<li><a href="#">CS314</a></li>
+	<li><a href="room.php ? room=0">CS101</a></li>
+	<li><a href="room.php ? room=1">CS102</a></li>
+	<li><a href="room.php ? room=2">CS103</a></li>
+	<li><a href="room.php ? room=3">CS210</a></li>
+	<li><a href="room.php ? room=4">CS314</a></li>
 	</ul>
 	</li>
 	<li><a href="change_password.php">CHANGE PASSWORD</a></li>
