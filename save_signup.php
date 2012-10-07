@@ -3,6 +3,7 @@ include("connect.php");
 $name=$_SESSION['name'];
 $user=$_SESSION['user'];
 $pass=$_SESSION['pass'];
+$pass=crypt($pass);
 $email=$_SESSION['email'];
 $category=$_SESSION['category'];
 //mysql_query("INSERT INTO `project`.`member` (`name`, `email`, `category`, `user`, `pass`, `id`) VALUES ($name, $email,'2', $user, $pass, NULL)");
