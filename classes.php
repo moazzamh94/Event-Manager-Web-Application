@@ -45,7 +45,7 @@ $c=$c->format('D, j M, Y');
 echo "<h3>".$c."</h3>";
 ?>
 <table border="5px" width="400px">
-<tr>
+<tr bgcolor="#00FF00">
 <th>
 EVENT
 </th>
@@ -78,7 +78,7 @@ if($d!=$c)
 echo "</table><h3>".$d."</h3>";
 ?>
 <table border="5px" width="400px">
-<tr>
+<tr bgcolor="#00FF00">
 <th>
 EVENT
 </th>
