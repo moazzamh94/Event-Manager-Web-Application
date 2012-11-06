@@ -11,6 +11,7 @@ else {$email=$_REQUEST['email'];if($email=='') {$_SESSION['error']="email is mis
 else {$category=$_REQUEST['category'];if($_REQUEST['category']=='-1') {$_SESSION['error']="please select your category";$flag=0;}
 else if($_REQUEST['password']!=$_REQUEST['confirmpassword']) {$_SESSION['error']="passwords do not match"; $flag=0;}
 }}}}
+if(strlen($pass)<4){$_SESSION['error']="password should be minimum 4 characters long"; $flag=0;}
 $c=1;
 $q=mysql_query("select * from `member`") or die(mysql_error());
 while($qs=mysql_fetch_array($q))
